@@ -1,5 +1,5 @@
 # Locust Mysql 
-A simple demo for sending random test data to a mysqlDB. 
+A simple demo for sending random test data to a mysqlDB using Locust. 
 
 ### PIP
 ```
