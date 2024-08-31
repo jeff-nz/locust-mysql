@@ -1,10 +1,5 @@
 # Locust Mysql 
-
-
-### Local Lib requirement
-```
-sudo pacman -S python-mysqlclient
-```
+A simple demo for sending random test data to a mysqlDB. 
 
 ### PIP
 ```
@@ -24,6 +19,23 @@ poetry install
 
 
 ### Run
+STEP 1 - start mysql
+```
+./bin/mysql-reset 
+```
+
+STEP 2 - setup mysql table
+```
+./bin/mysql-reset 
+```
+
+STEP 3 - run locust to start populating random test data
 ```
 poetry run locust -f src/main.py 
+```
+
+
+Cleanup docker and data from your local
+```
+./bin/mysql-remove 
 ```
