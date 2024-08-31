@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker exec -i local-mysql mysql -ulocust-mysql-user -pmy_cool_secret test < ${PWD}/bin/test.sql

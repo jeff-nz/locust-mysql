@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+echo "Check & Create directory ${PWD}/tmp/mysql-config"
+mkdir -p "${PWD}/tmp/mysql-config"
+docker stop local-mysql;
+docker rm local-mysql;
+echo "STARTING LOCAL MYSQL"
+docker run --detach --name local-mysql \
+--env MYSQL_USER=locust-mysql-user \
+--env MYSQL_PASSWORD=my_cool_secret \
+--env MYSQL_DATABASE=test \
+--env MYSQL_ROOT_PASSWORD=my-secret-pw  \
+-v ${PWD}/tmp/mysql-config:/etc/mysql/conf.d \
+-p 127.0.0.1:3306:3306 \
+mysql:latest
+

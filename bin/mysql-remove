@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+echo "Deleting directory ${PWD}/tmp/mysql-config"
+rm -rf "${PWD}/tmp/mysql-config"
+docker stop local-mysql;
+docker rm local-mysql;
+

@@ -1,0 +1,6 @@
+CREATE TABLE users (
+    id CHAR(36) NOT NULL PRIMARY KEY,
+    name VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    email VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+    age INT UNSIGNED CHECK (age >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
